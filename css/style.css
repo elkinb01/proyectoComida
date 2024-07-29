@@ -194,6 +194,8 @@ body{
     cursor: pointer;
     color: #a7a7a7;
     font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
     transition: background ease 0.2s;
 }
 
