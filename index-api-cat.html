@@ -23,14 +23,14 @@
         async function getApiCat() {
             let imagen = await fetch('https://api.thecatapi.com/v1/images/search');
             imagen = await imagen.json()
-            document.getElementById("cat1").src = res.results[0].picture.large;
-            document.getElementById("cat2").src = res.results[0].picture.large;
-            document.getElementById("cat3").src = res.results[0].picture.large;
-            document.getElementById("cat4").src = res.results[0].picture.large;
-            document.getElementById("cat5").src = res.results[0].picture.large;
-            document.getElementById("cat6").src = res.results[0].picture.large;
-            document.getElementById("cat7").src = res.results[0].picture.large;
-            document.getElementById("cat8").src = res.results[0].picture.large;
+            document.getElementById("cat1").src = imagen.response[0].url.breeds;
+            document.getElementById("cat2").src = imagen.response[0].url.breeds;
+            document.getElementById("cat3").src = imagen.response[0].url.breeds;
+            document.getElementById("cat4").src = imagen.response[0].url.breeds;
+            document.getElementById("cat5").src = imagen.response[0].url.breeds;
+            document.getElementById("cat6").src = imagen.response[0].url.breeds;
+            document.getElementById("cat7").src = imagen.response[0].url.breeds;
+            document.getElementById("cat8").src = imagen.response[0].url.breeds;
         }
 
     </script>
