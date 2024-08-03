@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bienvenido a API CAT</title>
+</head>
+
+<body>
+
+    <button onclick="getApiCat()">GET CATS!!</button>
+    <img src="cat1" alt="">
+    <img src="cat2" alt="">
+    <img src="cat3" alt="">
+    <img src="cat4" alt="">
+    <img src="cat5" alt="">
+    <img src="cat6" alt="">
+    <img src="cat7" alt="">
+    <img src="cat8" alt="">
+
+    <script>
+        async function getApiCat() {
+            let imagen = await fetch('https://api.thecatapi.com/v1/images/search');
+            imagen = await imagen.json()
+            document.getElementById("cat1").src = res.results[0].picture.large;
+            document.getElementById("cat2").src = res.results[0].picture.large;
+            document.getElementById("cat3").src = res.results[0].picture.large;
+            document.getElementById("cat4").src = res.results[0].picture.large;
+            document.getElementById("cat5").src = res.results[0].picture.large;
+            document.getElementById("cat6").src = res.results[0].picture.large;
+            document.getElementById("cat7").src = res.results[0].picture.large;
+            document.getElementById("cat8").src = res.results[0].picture.large;
+        }
+
+    </script>
+</body>
+
+</html>
