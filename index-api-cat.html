@@ -21,7 +21,7 @@
 
     <script>
         async function getApiCat() {
-            let imagen = await fetch('https://api.thecatapi.com/v1/images/search');
+            let imagen = await fetch('https://api.thecatapi.com/v1/images/');
             imagen = await imagen.json()
             document.getElementById("cat1").src = imagen.id[2].url.breeds;
             document.getElementById("cat2").src = imagen.id[2].url.breeds;
